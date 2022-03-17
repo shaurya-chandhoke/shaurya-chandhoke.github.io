@@ -1299,10 +1299,13 @@ input[type="text"] {
 /*# sourceMappingURL=style.css.map */
 
 .blog-container {
-  display: inline-block;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
   height: auto;
   min-height: 100% !important;
   padding: 10px 20%;
+  border: 1px solid blue;
 }
 @media screen and (max-width: 768px) {
   .blog-container{
@@ -1324,4 +1327,14 @@ input[type="text"] {
 #blog-content p {
   padding: 0 !important;
   margin: 0 !important;
+}
+
+.wip-placeholder {
+  max-width: 1500px;
+  max-height: 1000px;
+}
+
+.wip-image {
+  max-width: 100%;
+  max-height: 100%;
 }
