@@ -1297,3 +1297,31 @@ input[type="text"] {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.blog-container {
+  display: inline-block;
+  height: auto;
+  min-height: 100% !important;
+  padding: 10px 20%;
+}
+@media screen and (max-width: 768px) {
+  .blog-container{
+    padding: 3em 0;
+  }
+}
+
+.blog-footer {
+  padding: 50px 0;
+  float: left;
+  width: 100%;
+  background: rgba(61, 121, 164);
+  color: white;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+#blog-content p {
+  padding: 0 !important;
+  margin: 0 !important;
+}
