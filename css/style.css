@@ -1305,7 +1305,6 @@ input[type="text"] {
   height: auto;
   min-height: 100% !important;
   padding: 10px 20%;
-  border: 1px solid blue;
 }
 @media screen and (max-width: 768px) {
   .blog-container{
