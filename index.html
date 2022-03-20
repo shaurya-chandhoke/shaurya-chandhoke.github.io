@@ -27,6 +27,11 @@
     <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
 
+    <!-- Custom Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="css/animate.css">
     <!-- Icomoon Icon Fonts-->
@@ -44,12 +49,26 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->
 
+    <!-- Latex -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     <!-- PRISM -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/themes/prism-tomorrow.css" integrity="sha512-PRPGfHKa2eGLwuAFVtaIaC1cOJDqw0zPfr5wWq06Nkt0w/KK6IPMNFwUOj/t6zq3D1vVAskdg18R93pLsxzErA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js" integrity="sha512-/Swpp6aCQ0smuZ+zpklJqMClcUlvxhpLf9aAcM7JjJrj2waCU4dikm3biOtMVAflOOeniW9qzaNXNrbOAOWFCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-core.min.js" integrity="sha512-LCKPTo0gtJ74zCNMbWw04ltmujpzSR4oW+fgN+Y1YclhM5ZrHCZQAJE4quEodcI/G122sRhSGU2BsSRUZ2Gu3w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-python.min.js" integrity="sha512-AKaNmg8COK0zEbjTdMHJAPJ0z6VeNqvRvH4/d5M4sHJbQQUToMBtodq4HaV4fa+WV2UTfoperElm66c9/8cKmQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-GP4x8UWxWyh4BMbyJGOGneiTbkrWEF5izsVJByzVLodP8CuJH/n936+yQDMJJrOPUHLgyPbLiGw2rXmdvGdXHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/themes/prism-tomorrow.css"
+          integrity="sha512-PRPGfHKa2eGLwuAFVtaIaC1cOJDqw0zPfr5wWq06Nkt0w/KK6IPMNFwUOj/t6zq3D1vVAskdg18R93pLsxzErA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js"
+            integrity="sha512-/Swpp6aCQ0smuZ+zpklJqMClcUlvxhpLf9aAcM7JjJrj2waCU4dikm3biOtMVAflOOeniW9qzaNXNrbOAOWFCw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-core.min.js"
+            integrity="sha512-LCKPTo0gtJ74zCNMbWw04ltmujpzSR4oW+fgN+Y1YclhM5ZrHCZQAJE4quEodcI/G122sRhSGU2BsSRUZ2Gu3w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-python.min.js"
+            integrity="sha512-AKaNmg8COK0zEbjTdMHJAPJ0z6VeNqvRvH4/d5M4sHJbQQUToMBtodq4HaV4fa+WV2UTfoperElm66c9/8cKmQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/plugins/autoloader/prism-autoloader.min.js"
+            integrity="sha512-GP4x8UWxWyh4BMbyJGOGneiTbkrWEF5izsVJByzVLodP8CuJH/n936+yQDMJJrOPUHLgyPbLiGw2rXmdvGdXHA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
 
@@ -394,8 +413,12 @@
                                        target="_blank">favorite songs</a> to see what I'm listening to.</p>
                             </div>
                             <div class="feature-copy" style="margin-top: 10px;">
-                                <p style="margin: 0 0 10px; padding: 0; font-style: italic">A current favorite song of mine</p>
-                                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5FcK65jGaIPzdIUB9asktp?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                                <p style="margin: 0 0 10px; padding: 0; font-style: italic">A current favorite song of
+                                    mine</p>
+                                <iframe style="border-radius:12px"
+                                        src="https://open.spotify.com/embed/track/5FcK65jGaIPzdIUB9asktp?utm_source=generator"
+                                        width="100%" height="80" frameBorder="0" allowfullscreen=""
+                                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                             </div>
                         </div>
                     </div>
@@ -570,7 +593,7 @@
                     <a href="https://github.com/shaurya-chandhoke/ffa-engine" target="_blank" class="work"
                        style="background-image: url(/images/portfolio/fama_french.png);">
                         <div class="desc">
-                            <h3>Fama French Three Factor Allocation Engine</h3>
+                            <h3>Fama French Three-Factor Allocation Engine</h3>
                             <span>A factor-based allocation engine that uses the Fama French 3 Factor model to perform a long/short trading strategy.</span>
                         </div>
                     </a>
@@ -607,28 +630,35 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="fh5co-blog animate-box">
-                        <a href="pages/blogs/the-ffaengine-and-autonomous-trading.html" target="_blank" class="blog-bg"
-                           style="background-image: url(images/blogs/the-ffaengine-and-autonomous-trading/blog-background.jpg);"></a>
+                        <a href="pages/blogs/edge-tracing-with-nonmaximum-suppression.html" target="_blank"
+                           class="blog-bg"
+                           style="background-image: url(images/blogs/edge-tracing-with-nonmaximum-suppression/blog-background.jpg);"></a>
                         <div class="blog-text">
-                            <span class="posted_on">Mar 17, 2022</span>
-                            <h3><a href="pages/blogs/the-ffaengine-and-autonomous-trading.html" target="_blank">The FFAEngine and Autonomous Trading</a></h3>
-                            <p>Using the Fama French Three Factor model to understand market sensitivities and simulate various autonomous trading strategies</p>
+                            <span class="posted_on">March 19, 2022</span>
+                            <h3><a href="pages/blogs/edge-tracing-with-nonmaximum-suppression.html" target="_blank">Edge
+                                Tracing with Non-maximum Suppression</a></h3>
+                            <p>And learning about the core building blocks of elementary computer vision
+                                applications</p>
                             <ul class="stuff">
-                                <li><a href="pages/blogs/the-ffaengine-and-autonomous-trading.html" target="_blank">Read More<i class="icon-arrow-right22"></i></a></li>
+                                <li><a href="pages/blogs/the-ffaengine-and-autonomous-trading.html" target="_blank">Read
+                                    More<i class="icon-arrow-right22"></i></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="fh5co-blog animate-box">
-                        <a href="pages/blogs/edge-tracing-with-nonmaximum-suppression.html" target="_blank" class="blog-bg"
-                           style="background-image: url(images/blogs/edge-tracing-with-nonmaximum-suppression/blog-background.jpg);"></a>
+                        <a href="pages/blogs/the-ffaengine-and-autonomous-trading.html" target="_blank" class="blog-bg"
+                           style="background-image: url(images/blogs/the-ffaengine-and-autonomous-trading/blog-background.jpg);"></a>
                         <div class="blog-text">
-                            <span class="posted_on">Mar 19, 2022</span>
-                            <h3><a href="pages/blogs/edge-tracing-with-nonmaximum-suppression.html" target="_blank">Edge Tracing with Non-maximum Suppression</a></h3>
-                            <p>And learning about the core building blocks of elementary computer vision applications</p>
+                            <span class="posted_on">March 17, 2022</span>
+                            <h3><a href="pages/blogs/the-ffaengine-and-autonomous-trading.html" target="_blank">The
+                                FFAEngine and Autonomous Trading</a></h3>
+                            <p>Using the Fama French Three-Factor model to understand market sensitivities for
+                                simulating trading strategies</p>
                             <ul class="stuff">
-                                <li><a href="pages/blogs/the-ffaengine-and-autonomous-trading.html" target="_blank">Read More<i class="icon-arrow-right22"></i></a></li>
+                                <li><a href="pages/blogs/the-ffaengine-and-autonomous-trading.html" target="_blank">Read
+                                    More<i class="icon-arrow-right22"></i></a></li>
                             </ul>
                         </div>
                     </div>

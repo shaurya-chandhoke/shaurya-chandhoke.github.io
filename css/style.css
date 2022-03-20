@@ -11,12 +11,13 @@
 *
 * ======================================================= */
 body {
-  font-family: "Space Mono", Arial, serif;
+  font-family: 'Fira Sans', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
   color: #4d4d4d;
   background: #fff;
+  scroll-behavior: smooth;
 }
 
 #page {
@@ -64,7 +65,7 @@ p {
 
 h1, h2, h3, h4, h5, h6, figure {
   color: #000;
-  font-family: "Space Mono", Arial, serif;
+  font-family: 'Fira Sans', sans-serif;
   font-weight: 400;
   margin: 0 0 20px 0;
 }
@@ -1089,7 +1090,7 @@ input[type="text"] {
 .btn {
   margin-right: 4px;
   margin-bottom: 4px;
-  font-family: "Space Mono", Arial, serif;
+  font-family: 'Fira Sans', sans-serif;
   font-size: 16px;
   font-weight: 400;
   -webkit-border-radius: 30px;
@@ -1298,13 +1299,14 @@ input[type="text"] {
 
 /*# sourceMappingURL=style.css.map */
 
+
+/* Custom Styles */
 .blog-container {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
   height: auto;
   min-height: 100% !important;
-  padding: 10px 20%;
+  padding: 50px 20%;
 }
 @media screen and (max-width: 768px) {
   .blog-container{
@@ -1323,9 +1325,28 @@ input[type="text"] {
   margin-bottom: 0;
 }
 
+#blog-content {
+  /*border: 1px solid blue;*/
+  width: 100%;
+}
 #blog-content p {
   padding: 0 !important;
   margin: 0 !important;
+}
+#blog-content h2 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#blog-content a {
+  text-decoration: underline;
+}
+
+#blog-introduction p:first-child:first-letter {
+  float: left;
+  color: black;
+  font-size: 5.3rem;
+  line-height: .77;
+  margin: .1em .1em -.1em 0;
 }
 
 .wip-placeholder {
@@ -1336,4 +1357,11 @@ input[type="text"] {
 .wip-image {
   max-width: 100%;
   max-height: 100%;
+}
+
+#blog-date {
+  margin-top: 25px;
+  color: white;
+  text-align: center;
+  font-size: 14px;
 }

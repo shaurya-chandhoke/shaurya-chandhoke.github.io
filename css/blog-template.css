@@ -5,7 +5,7 @@
 
 .blog_title h1 {
     transform: rotate(0deg) !important;
-    font-family: "Space Mono", Arial, serif !important;
+    font-family: 'Fira Sans', sans-serif !important;
 }
 
 .no-margin-bottom {

@@ -55,7 +55,16 @@
     <![endif]-->
 
     <!-- Custom Section -->
+    <!-- Custom Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../../css/blog-template.css">
+    <!-- Latex -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 
     <!-- PRISM -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/themes/prism-tomorrow.css"
@@ -93,8 +102,11 @@
                             <h1>The FFAEngine and Autonomous Trading</h1>
 
                             <!-- Enter Subtitle Here -->
-                            <h3><span>Using the Fama French Three Factor model to understand market sensitivities for simulating various autonomous trading strategies</span>
+                            <h3><span>Using the Fama French Three-Factor model to understand market sensitivities for simulating trading strategies</span>
                             </h3>
+
+                            <!-- Enter Date Here -->
+                            <div id="blog-date">March 17, 2022</div>
                             <p></p>
                         </div>
                     </div>
@@ -104,10 +116,41 @@
     </header>
     <div class="blog-container">
         <div id="blog-content" class="animate-box">
-            <h2>Page under construction, please check back later!</h2>
-            <div class="wip-placeholder animate-box">
-                <img src="../../images/under-construction.jpg" class="wip-image">
-            </div>
+            <section id="blog-introduction">
+                <p>
+                    The Fama French Three-Factor model is an asset pricing model that's built atop the Capital Asset
+                    Pricing model, or <a
+                        href="http://mba.tuck.dartmouth.edu/bespeneckbo/default/AFA611-Eckbo%20web%20site/AFA611-S6B-FamaFrench-CAPM-JEP04.pdf"
+                        target="_blank">CAPM</a>.
+                </p>
+                <br>
+                <p>
+                    Both of these models are used in portfolio management to explain the
+                    various attributes that can comprise the price of an asset. In this post, we're going to look into
+                    the
+                    nuances of the Fama French Three-Factor model and explore a custom engine written in Python 3 that
+                    leverages this model to understand some of its sensitivities to drastic changes in the market.
+                </p>
+            </section>
+            <section id="blog-section-1">
+                <h2>Understanding the CAPM</h2>
+                <p>
+                    Let's start off by understanding the CAPM. Introduced in the 1960's by William Sharpe, the CAPM was
+                    designed in an effort to understand how non-diversifiable risk can influence the expected return of
+                    an asset. The following is the formula of the CAPM.
+                </p>
+                <p>
+                    \[\rho_i = \rho_0 + \beta_{i}^{s}(\rho_m - \rho_0) \]
+                    where
+                    \[\beta_{i}^{s} = {\mathrm{cov}(R_i, R_m) \over \sigma^{2}_{m}}, \]
+                    \(\rho_i\) is the expected return of the asset, \(\rho_0\) is the risk-free rate (typically pulled
+                    from stable securities like government bonds),
+                    and \(\rho_m\) is the expected return on the market. The core of the CAPM model lies within
+                    \(\beta_{i}^{s}\) which can be described as the sensitivity between the asset and the market's
+                    expected excess returns. Subtracting the expected returns between the market and the risk-free rate
+                    yields a value known as the market risk premium.
+                </p>
+            </section>
         </div>
     </div>
 
