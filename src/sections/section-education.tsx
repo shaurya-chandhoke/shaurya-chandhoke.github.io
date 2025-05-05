@@ -1,4 +1,4 @@
-import InfoCard from "./info-card.tsx";
+import InfoCard from "../components/info-card.tsx";
 import {EDUCATION_DATA} from "../data.tsx";
 
 const SectionEducation = () => {

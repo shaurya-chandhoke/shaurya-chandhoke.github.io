@@ -1,4 +1,4 @@
-import {CardData, InfoCardData} from "./interfaces/global-interfaces.ts";
+import {BlogData, CardData, InfoCardData} from "./interfaces/global-interfaces.ts";
 
 export const COPYRIGHT: number = 2025;
 
@@ -76,3 +76,13 @@ export const CARD_DATA: CardData[] = [
         },
     }
 ];
+
+export const BLOG_DATA: BlogData[] = [
+    {
+        title: "Building An Engine To Perform Autonomous Trades During The 2008 Financial Crisis",
+        description: "medium.com",
+        imgSrc: "/blogs/blog-background.jpg",
+        imgAlt: "Computer monitor showcasing stock graph",
+        href: "https://medium.com/@chandhoke.shaurya/the-ffaengine-and-autonomous-trading-b92a8a09c911"
+    }
+]

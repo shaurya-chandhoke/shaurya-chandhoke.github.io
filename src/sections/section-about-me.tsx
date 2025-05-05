@@ -1,4 +1,4 @@
-import {TextEffect} from "./text-effect.tsx";
+import {TextEffect} from "../components/text-effect.tsx";
 
 const SectionAboutMe = () => {
     return (

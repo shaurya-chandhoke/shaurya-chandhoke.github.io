@@ -6,6 +6,8 @@ import {useEffect, useState} from "react";
 const Footer = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
+    const ICON_SIZE: number = 16
+
     const applyTheme = (theme: "light" | "dark" | "system") => {
         if (theme === "system") {
             localStorage.removeItem("theme");
@@ -36,19 +38,19 @@ const Footer = () => {
 
     const ITEMS = [
         {
-            icon: <Sun/>,
+            icon: <Sun size={ICON_SIZE} />,
             dataId: "light",
             ariaLabel: "Switch to light theme",
             action: () => applyTheme("light")
         },
         {
-            icon: <Moon/>,
+            icon: <Moon size={ICON_SIZE}/>,
             dataId: "dark",
             ariaLabel: "Switch to dark theme",
             action: () => applyTheme("dark")
         },
         {
-            icon: <Monitor/>,
+            icon: <Monitor size={ICON_SIZE}/>,
             dataId: "system",
             ariaLabel: "Switch to system theme",
             action: () => applyTheme("system")
@@ -78,7 +80,7 @@ const Footer = () => {
                             className={`relative inline-flex w-8 h-8 items-center justify-center rounded transition-colors ${
                                 activeIndex === index
                                     ? "bg-zinc-200 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100"
-                                    : "bg-zinc-100 text-zinc-600 dark:bg-zinc-700 dark:text-zinc-400"
+                                    : ""
                             }`}
                         >
                             {item.icon}

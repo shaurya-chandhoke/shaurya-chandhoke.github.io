@@ -1,11 +1,11 @@
 import './App.css'
 import Header from "./components/header.tsx";
 import Footer from "./components/footer.tsx";
-import SectionAboutMe from "./components/section-about-me.tsx";
-import SectionWorkExperience from "./components/section-work-experience.tsx";
-import SectionEducation from "./components/section-education.tsx";
-import SectionProjects from "./components/section-projects.tsx";
-import SectionBlog from "./components/section-blog.tsx";
+import SectionAboutMe from "./sections/section-about-me.tsx";
+import SectionWorkExperience from "./sections/section-work-experience.tsx";
+import SectionEducation from "./sections/section-education.tsx";
+import SectionProjects from "./sections/section-projects.tsx";
+import SectionBlog from "./sections/section-blog.tsx";
 import {StaggeredFadeInBlur} from "./components/fade-in-blur-effect.tsx";
 
 function App() {

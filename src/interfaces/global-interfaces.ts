@@ -20,10 +20,18 @@ export interface StaggeredFadeInBlurProps {
 }
 
 export interface CardData {
-    description: string;
     title: string;
+    description: string;
     src: string;
     ctaText: string;
     ctaLink: string;
     content: () => JSX.Element;
+}
+
+export interface BlogData {
+    title: string;
+    description: string;
+    imgSrc: string;
+    imgAlt: string;
+    href: string;
 }

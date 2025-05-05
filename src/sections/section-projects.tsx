@@ -1,4 +1,4 @@
-import {ExpandableCard} from "./expandable-card";
+import {ExpandableCard} from "../components/expandable-card.tsx";
 
 const SectionProjects = () => {
     return (
