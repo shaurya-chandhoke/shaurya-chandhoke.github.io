@@ -11,9 +11,9 @@ const SectionBlog = () => {
             <h3 className="mb-5 text-lg font-medium">Blog</h3>
 
             {BLOG_DATA.map((blog, index) => (
-                <a href={blog.href} target="_blank" key={index}>
+                <a href={blog.href} target="_blank" key={index} className="inline-block m-0" aria-label={`Blog post on ${blog.title}`}>
                     <div
-                        className='relative my-4 aspect-square h-[300px] overflow-hidden rounded-[4px]'
+                        className='relative aspect-square h-[300px] overflow-hidden rounded-[4px]'
                         onMouseEnter={() => setIsHover(true)}
                         onMouseLeave={() => setIsHover(false)}
                     >
