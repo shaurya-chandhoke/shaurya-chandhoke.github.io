@@ -2,6 +2,56 @@ import {BlogData, CardData, InfoCardData} from "./interfaces/global-interfaces.t
 
 export const COPYRIGHT: number = 2025;
 
+export const CONTEXT_DATA = {
+    "github": "https://github.com/shaurya-chandhoke",
+    "linkedin": "https://www.linkedin.com/in/shaurya-chandhoke",
+    "spotify": "https://open.spotify.com/user/98_diesel?si=492796f1d0a64660",
+}
+
+export const SKILLS: string[] = [
+    "Machine Learning",
+    "Software Engineering",
+    "Quantitative Finance",
+    "Algorithmic Trading",
+    "Data Science",
+    "Artificial Intelligence",
+    "Natural Language Processing",
+    "Computer Vision",
+    "Large Language Models",
+    "Deep Learning",
+    "Data Governance",
+    "API Architecture",
+    "Systems Engineering",
+    "REST",
+    "GraphQL",
+    "Spring Boot",
+    "RabbitMQ",
+    "Docker",
+    "Kubernetes",
+    "Jenkins",
+    "Spark",
+    "Splunk",
+    "NLTK",
+    "Scikit-learn",
+    "TensorFlow",
+    "Keras",
+    "PostgreSQL",
+    "MongoDB",
+    "MySQL",
+    "Elasticsearch",
+    "Redis",
+    "Oracle DB",
+    "KDB+",
+    "C++",
+    "Python",
+    "Java",
+    "Rust",
+    "JavaScript",
+    "TypeScript",
+    "R",
+    "Julia"
+];
+
 export const EDUCATION_DATA: InfoCardData[] = [
     {
         heading: "Machine Learning",

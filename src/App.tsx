@@ -7,6 +7,8 @@ import SectionEducation from "./sections/section-education.tsx";
 import SectionProjects from "./sections/section-projects.tsx";
 import SectionBlog from "./sections/section-blog.tsx";
 import {StaggeredFadeInBlur} from "./components/fade-in-blur-effect.tsx";
+import SkillSlider from "./components/skill-slider.tsx";
+import SectionConnect from "./sections/section-connect.tsx";
 
 function App() {
     return (
@@ -16,9 +18,11 @@ function App() {
                 <SectionAboutMe/>
                 <StaggeredFadeInBlur baseDelay={100} staggerDelay={300} duration={600}>
                     <SectionProjects/>
+                    <SkillSlider/>
                     <SectionWorkExperience/>
                     <SectionEducation/>
                     <SectionBlog/>
+                    <SectionConnect/>
                 </StaggeredFadeInBlur>
             </main>
             <Footer/>
