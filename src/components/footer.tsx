@@ -12,9 +12,11 @@ const Footer = () => {
         if (theme === "system") {
             localStorage.removeItem("theme");
             const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-            document.documentElement.classList.toggle("dark", prefersDark);
+            document.documentElement.classList.remove("light", "dark");
+            document.documentElement.classList.add(prefersDark ? "dark" : "light");
         } else {
-            document.documentElement.classList.toggle("dark", theme === "dark");
+            document.documentElement.classList.remove("light", "dark");
+            document.documentElement.classList.add(theme);
             localStorage.setItem("theme", theme);
         }
     };
@@ -23,15 +25,18 @@ const Footer = () => {
     useEffect(() => {
         const savedTheme = localStorage.getItem("theme");
         if (savedTheme === "dark") {
+            document.documentElement.classList.remove("light");
             document.documentElement.classList.add("dark");
             setActiveIndex(1);
         } else if (savedTheme === "light") {
             document.documentElement.classList.remove("dark");
+            document.documentElement.classList.add("light");
             setActiveIndex(0);
         } else {
             // system
             const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-            document.documentElement.classList.toggle("dark", prefersDark);
+            document.documentElement.classList.remove("light", "dark");
+            document.documentElement.classList.add(prefersDark ? "dark" : "light");
             setActiveIndex(2);
         }
     }, []);
