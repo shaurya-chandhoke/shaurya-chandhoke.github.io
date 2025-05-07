@@ -1,6 +1,6 @@
 "use client";
 
-import {JSX, useEffect, useId, useRef, useState} from "react";
+import React, {JSX, useEffect, useId, useRef, useState} from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "../hooks/use-outside-click";
 import { CARD_DATA } from "../data";
@@ -209,7 +209,7 @@ export function ExpandableCard(): JSX.Element {
                                             initial={{ opacity: 0, y: 20 }}
                                             animate={{ opacity: 1, y: 0 }}
                                             transition={{ duration: 0.3, delay: 0.2 }}
-                                            className="font-medium text-neutral-700 dark:text-neutral-200 text-base"
+                                            className="font-medium text-neutral-700 dark:text-neutral-200"
                                         >
                                             {active.title}
                                         </motion.h3>
@@ -217,7 +217,7 @@ export function ExpandableCard(): JSX.Element {
                                             initial={{ opacity: 0, y: 20 }}
                                             animate={{ opacity: 1, y: 0 }}
                                             transition={{ duration: 0.3, delay: 0.3 }}
-                                            className="text-neutral-600 dark:text-neutral-400 text-base"
+                                            className="text-neutral-600 dark:text-neutral-400"
                                         >
                                             {active.description}
                                         </motion.p>
@@ -240,7 +240,7 @@ export function ExpandableCard(): JSX.Element {
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.3, delay: 0.5 }}
-                                        className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                                        className="text-neutral-600 h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                                     >
                                         {typeof active.content === "function"
                                             ? active.content()
@@ -280,7 +280,7 @@ export function ExpandableCard(): JSX.Element {
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.3 }}
-                                    className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left text-base"
+                                    className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left"
                                 >
                                     {card.title}
                                 </motion.h3>
@@ -288,7 +288,7 @@ export function ExpandableCard(): JSX.Element {
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.3, delay: 0.1 }}
-                                    className="text-neutral-600 dark:text-neutral-400 text-center md:text-left text-base"
+                                    className="text-neutral-600 dark:text-neutral-400 text-center md:text-left"
                                 >
                                     {card.description}
                                 </motion.p>
